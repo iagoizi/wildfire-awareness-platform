@@ -144,6 +144,7 @@ Pendente → Em Análise → Encaminhada [Órgão X] → Resolvida
 
 ### Diagrama de Casos de Uso
 
+![ODS 15 - Vida Terrestre](../docs/imgs/diagrama-casos-de-uso.png)
 
 ---
 
