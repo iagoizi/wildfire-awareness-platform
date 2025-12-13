@@ -1,7 +1,6 @@
 # Plataforma Web de Conscientização e Denúncia de Queimadas
 
-[![ODS 13 - Ação Contra a Mudança Global do Clima](./docs/imgs/ods-13.png)](https://sdgs.un.org/goals/goal13)
-[![ODS 15 - Vida Terrestre](./docs/imgs/ods-15.jpg)](https://sdgs.un.org/goals/goal15)
+![ODS 13 e 15](./docs/imgs/ods-13-15.png)
 
 ## 📋 Descrição Geral
 
@@ -23,9 +22,9 @@ As queimadas criminosas representam uma grave ameaça ambiental no Brasil, causa
 
 **Relação com os Objetivos de Desenvolvimento Sustentável (ODS):**
 
-- **ODS 13 - Ação Contra a Mudança Global do Clima**: O sistema contribui para a mitigação das mudanças climáticas ao combater uma das fontes de emissões de CO₂ e outros gases, além de promover conscientização sobre a relação entre queimadas e aquecimento global.
+- **[ODS 13 - Ação Contra a Mudança Global do Clima](https://sdgs.un.org/goals/goal13)**: O sistema contribui para a mitigação das mudanças climáticas ao combater uma das fontes de emissões de CO₂ e outros gases, além de promover conscientização sobre a relação entre queimadas e aquecimento global.
 
-- **ODS 15 - Vida Terrestre**: A plataforma apoia a proteção, recuperação e uso sustentável dos ecossistemas terrestres, combatendo a degradação do solo e a perda de biodiversidade causadas pelos incêndios criminosos.
+- **[ODS 15 - Vida Terrestre](https://sdgs.un.org/goals/goal15)**: A plataforma apoia a proteção, recuperação e uso sustentável dos ecossistemas terrestres, combatendo a degradação do solo e a perda de biodiversidade causadas pelos incêndios criminosos.
 
 ## 👥 Público-Alvo
 
