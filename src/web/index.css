@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Design System - Wildfire Awareness Platform */
+
+@layer base {
+  :root {
+    /* Core colors - Earth and Fire palette */
+    --background: 20 25% 12%; /* Dark brown */
+    --foreground: 30 15% 90%; /* Cream white */
+
+    --card: 150 30% 18%; /* Dark forest green */
+    --card-foreground: 30 15% 90%;
+
+    --popover: 20 30% 15%;
+    --popover-foreground: 30 15% 90%;
+
+    /* Primary - Coral/Red fire accent */
+    --primary: 6 78% 57%; /* Coral red */
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Dark brown */
+    --secondary: 20 35% 16%;
+    --secondary-foreground: 30 15% 90%;
+
+    /* Muted */
+    --muted: 20 20% 20%;
+    --muted-foreground: 30 10% 65%;
+
+    /* Accent - Forest green */
+    --accent: 150 35% 22%;
+    --accent-foreground: 30 15% 90%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* UI elements */
+    --border: 20 20% 25%;
+    --input: 150 20% 25%;
+    --ring: 6 78% 57%;
+
+    --radius: 0.5rem;
+
+    /* Custom colors for the theme */
+    --earth-brown: 20 35% 16%;
+    --forest-green: 150 30% 18%;
+    --forest-green-dark: 150 35% 12%;
+    --fire-coral: 6 78% 57%;
+    --fire-orange: 25 90% 50%;
+    --cream: 30 15% 90%;
+    --cream-muted: 30 10% 75%;
+
+    /* Sidebar */
+    --sidebar-background: 20 35% 14%;
+    --sidebar-foreground: 30 15% 90%;
+    --sidebar-primary: 6 78% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 30% 18%;
+    --sidebar-accent-foreground: 30 15% 90%;
+    --sidebar-border: 20 20% 22%;
+    --sidebar-ring: 6 78% 57%;
+  }
+
+  .dark {
+    --background: 20 25% 12%;
+    --foreground: 30 15% 90%;
+    --card: 150 30% 18%;
+    --card-foreground: 30 15% 90%;
+    --popover: 20 30% 15%;
+    --popover-foreground: 30 15% 90%;
+    --primary: 6 78% 57%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 35% 16%;
+    --secondary-foreground: 30 15% 90%;
+    --muted: 20 20% 20%;
+    --muted-foreground: 30 10% 65%;
+    --accent: 150 35% 22%;
+    --accent-foreground: 30 15% 90%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 20% 25%;
+    --input: 150 20% 25%;
+    --ring: 6 78% 57%;
+    --sidebar-background: 20 35% 14%;
+    --sidebar-foreground: 30 15% 90%;
+    --sidebar-primary: 6 78% 57%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 150 30% 18%;
+    --sidebar-accent-foreground: 30 15% 90%;
+    --sidebar-border: 20 20% 22%;
+    --sidebar-ring: 6 78% 57%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer utilities {
+  .text-gradient-fire {
+    @apply bg-gradient-to-r from-primary via-fire-orange to-primary bg-clip-text text-transparent;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      180deg,
+      hsl(20 35% 16% / 0.7) 0%,
+      hsl(20 35% 16% / 0.4) 40%,
+      hsl(20 35% 16% / 0.85) 100%
+    );
+  }
+
+  .section-forest {
+    background: linear-gradient(
+      180deg,
+      hsl(150 35% 12%) 0%,
+      hsl(150 30% 18%) 100%
+    );
+  }
+
+  .animate-fade-in-up {
+    opacity: 1;
+  }
+
+  .animate-fade-in {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
