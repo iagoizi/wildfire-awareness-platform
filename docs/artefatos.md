@@ -39,9 +39,10 @@ Abaixo estão as capturas de tela demonstrando a interface rodando em ambiente l
 ### Tela Inicial (Desktop)
 > Visão geral da Landing Page com navegação e CTA principal.
 
-![Screenshot da Home Desktop](./docs/imgs/home-desktop.png)
+![Screenshot da Home Desktop](./imgs/home-desktop.png)
 
 ### Responsividade (Mobile)
 > Adaptação da interface para dispositivos móveis, garantindo acessibilidade em campo.
 
-![Screenshot Mobile](./docs/imgs/home-mobile.png)
+![Screenshot Mobile](./imgs/home-mobile.png)
+
