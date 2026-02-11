@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { format } from "date-fns";
-import { CalendarIcon, Plus, X } from "lucide-react";
+import { CalendarIcon, Clock, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -226,15 +226,18 @@ const ReportForm = () => {
                     </TooltipContent>
                   )}
                 </Tooltip>
-                <Input
-                  id="hora"
-                  type="time"
-                  placeholder="HH:MM"
-                  value={horaIncendio}
-                  onChange={(e) => setHoraIncendio(e.target.value)}
-                  disabled={!dataIncendio}
-                  className="bg-transparent border-border text-foreground placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed"
-                />
+                <div className="relative">
+                  <Clock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                  <Input
+                    id="hora"
+                    type="time"
+                    placeholder="HH:MM"
+                    value={horaIncendio}
+                    onChange={(e) => setHoraIncendio(e.target.value)}
+                    disabled={!dataIncendio}
+                    className="bg-transparent border-border text-foreground placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed pl-9 [&::-webkit-calendar-picker-indicator]:hidden"
+                  />
+                </div>
               </div>
             </div>
 
