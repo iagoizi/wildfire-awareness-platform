@@ -3,7 +3,7 @@ import ReportForm from "@/components/ReportForm";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 import HeroSectionReport from "@/components/HeroSectionReport";
-import StatsSection from "@/components/StatsSection";
+import ReportStatsSection from "@/components/ReportStatsSection";
 
 const DenunciarQueimada = () => {
   return (
@@ -20,7 +20,7 @@ const DenunciarQueimada = () => {
         <Header />
         <main className="py-8">
             <HeroSectionReport />
-            <StatsSection />
+            <ReportStatsSection />
             <ReportForm />
         </main>
         <Footer />
