@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import StatsSection from "@/components/StatsSection";
+import SDGSection from "@/components/SDGSection";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
 
@@ -20,6 +21,7 @@ const Home = () => {
         <main>
           <HeroSection />
           <StatsSection />
+          <SDGSection />
         </main>
         <Footer />
       </div>
