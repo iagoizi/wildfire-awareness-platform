@@ -2,6 +2,8 @@ import Header from "@/components/Header";
 import ReportForm from "@/components/ReportForm";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
+import HeroSection from "@/components/HeroSection";
+import StatsSection from "@/components/StatsSection";
 
 const DenunciarQueimada = () => {
   return (
@@ -17,7 +19,9 @@ const DenunciarQueimada = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="py-8">
-          <ReportForm />
+            <HeroSection />
+            <StatsSection />
+            <ReportForm />
         </main>
         <Footer />
       </div>

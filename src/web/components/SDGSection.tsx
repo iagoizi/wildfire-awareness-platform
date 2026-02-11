@@ -23,7 +23,6 @@ const SDGSection = () => {
   return (
     <section className="bg-background py-24">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <p className="text-primary font-display text-lg md:text-xl uppercase tracking-wider mb-4">
             Objetivos de Desenvolvimento Sustentável
@@ -36,7 +35,6 @@ const SDGSection = () => {
           </p>
         </div>
 
-        {/* SDG Cards Grid */}
         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {sdgs.map((sdg, index) => {
             const IconComponent = sdg.icon;
@@ -46,12 +44,10 @@ const SDGSection = () => {
                 className="group relative overflow-hidden rounded-lg border border-border bg-card p-8 shadow-sm hover:shadow-md transition-all duration-300 animate-fade-in-up"
                 style={{ animationDelay: `${0.1 + index * 0.15}s` }}
               >
-                {/* Background gradient on hover */}
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${sdg.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
                 />
 
-                {/* Content */}
                 <div className="relative z-10">
                   <div className="flex items-start justify-between mb-6">
                     <div>
@@ -73,7 +69,6 @@ const SDGSection = () => {
                   </p>
                 </div>
 
-                {/* Bottom border accent */}
                 <div
                   className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${sdg.color} transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left`}
                 />
@@ -82,7 +77,6 @@ const SDGSection = () => {
           })}
         </div>
 
-        {/* Footer CTA */}
         <div className="mt-20 text-center">
           <p className="text-muted-foreground text-base md:text-lg max-w-2xl mx-auto">
             Ao denunciar queimadas, você contribui diretamente para o alcance desses objetivos globais de sustentabilidade.
