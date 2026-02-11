@@ -17,17 +17,15 @@ const StatsSection = () => {
   return (
     <section className="bg-secondary py-24">
       <div className="container mx-auto px-6">
-        {/* Quote */}
         <h2 className="font-display text-2xl md:text-3xl lg:text-4xl text-cream-muted uppercase tracking-widest text-center mb-20">
           Cada árvore em chamas é<br />
           um futuro que se apaga
         </h2>
-        
-        {/* Stats Grid */}
+
         <div className="grid md:grid-cols-2 gap-12 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="text-center animate-fade-in-up"
               style={{ animationDelay: `${0.2 + index * 0.2}s` }}
             >

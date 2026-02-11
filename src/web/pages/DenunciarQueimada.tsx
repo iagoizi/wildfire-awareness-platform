@@ -2,7 +2,7 @@ import Header from "@/components/Header";
 import ReportForm from "@/components/ReportForm";
 import Footer from "@/components/Footer";
 import { Helmet } from "react-helmet-async";
-import HeroSection from "@/components/HeroSection";
+import HeroSectionReport from "@/components/HeroSectionReport";
 import StatsSection from "@/components/StatsSection";
 
 const DenunciarQueimada = () => {
@@ -19,7 +19,7 @@ const DenunciarQueimada = () => {
       <div className="min-h-screen bg-background">
         <Header />
         <main className="py-8">
-            <HeroSection />
+            <HeroSectionReport />
             <StatsSection />
             <ReportForm />
         </main>
