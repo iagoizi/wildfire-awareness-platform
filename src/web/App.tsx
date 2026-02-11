@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Home from "./pages/Home";
 import DenunciarQueimada from "./pages/DenunciarQueimada";
 import NotFound from "./pages/NotFound";
+import { routes } from "./routes";
 
 const queryClient = new QueryClient();
 
@@ -20,8 +21,8 @@ const App = () => (
         <BrowserRouter>
           <ScrollToTop />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/denunciar-queimada" element={<DenunciarQueimada />} />
+            <Route path={routes.home} element={<Home />} />
+            <Route path={routes.report} element={<DenunciarQueimada />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

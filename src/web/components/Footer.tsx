@@ -1,4 +1,6 @@
 import { Flame } from "lucide-react";
+import { Link } from "react-router-dom";
+import { routes } from "@/routes";
 
 const Footer = () => {
   return (
@@ -23,19 +25,19 @@ const Footer = () => {
             <h4 className="font-semibold text-foreground mb-4">Sobre</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/" className="text-cream-muted hover:text-primary transition-colors underline">
+                <Link to={routes.home} className="text-cream-muted hover:text-primary transition-colors underline">
                   Página inicial
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#artigos" className="text-cream-muted hover:text-primary transition-colors underline">
+                <Link to={routes.articles} className="text-cream-muted hover:text-primary transition-colors underline">
                   Artigos
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="#denuncia" className="text-cream-muted hover:text-primary transition-colors underline">
+                <Link to={routes.reportForm} className="text-cream-muted hover:text-primary transition-colors underline">
                   Fazer denúncia!
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

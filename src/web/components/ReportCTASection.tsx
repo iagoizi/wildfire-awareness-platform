@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { routes } from "@/routes";
 
 const ReportCTASection = () => {
   return (
@@ -17,7 +18,7 @@ const ReportCTASection = () => {
             Sua denúncia ajuda a acionar as equipes locais mais rápido e impede que o fogo se espalhe.
           </p>
           <Button asChild variant="fire" size="xl" className="rounded-full">
-            <Link to="/denunciar-queimada">Denunciar agora</Link>
+            <Link to={routes.report}>Denunciar agora</Link>
           </Button>
         </div>
       </div>
