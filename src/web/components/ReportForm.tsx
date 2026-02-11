@@ -1,12 +1,13 @@
 import { useState } from "react";
 import { format } from "date-fns";
-import { CalendarIcon, Plus, X } from "lucide-react";
+import { CalendarIcon, Clock, Plus, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
+import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
 
@@ -14,6 +15,7 @@ const ReportForm = () => {
   const { toast } = useToast();
   const [photos, setPhotos] = useState<string[]>([]);
   const [dataIncendio, setDataIncendio] = useState<Date>();
+  const [horaIncendio, setHoraIncendio] = useState<string>("");
   const [formData, setFormData] = useState({
     estado: "",
     cidade: "",
@@ -158,23 +160,8 @@ const ReportForm = () => {
               </div>
             </div>
 
-            {/* Row 3: Email & Data aproximada */}
+            {/* Row 3: Data aproximada & Horário aproximado */}
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <Label htmlFor="email" className="text-foreground">
-                  E-mail de contato
-                </Label>
-                <Input
-                  id="email"
-                  type="email"
-                  placeholder="seu@email.com"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData((prev) => ({ ...prev, email: e.target.value }))
-                  }
-                  className="bg-transparent border-border text-foreground placeholder:text-muted-foreground"
-                />
-              </div>
               <div className="space-y-2">
                 <Label className="text-foreground">Data aproximada do incêndio</Label>
                 <Popover>
@@ -186,7 +173,7 @@ const ReportForm = () => {
                         !dataIncendio && "text-muted-foreground"
                       )}
                     >
-                      <CalendarIcon className="mr-2 h-4 w-4" />
+                      <CalendarIcon className="mr-2 h-4 w-4 text-muted-foreground" />
                       {dataIncendio ? format(dataIncendio, "dd/MM/yyyy") : "Selecione a data"}
                     </Button>
                   </PopoverTrigger>
@@ -202,6 +189,58 @@ const ReportForm = () => {
                   </PopoverContent>
                 </Popover>
               </div>
+              <div className="space-y-2">
+                <Tooltip>
+                  <TooltipTrigger asChild>
+                    <Label
+                      htmlFor="hora"
+                      className={cn(
+                        "text-foreground cursor-help",
+                        !dataIncendio && "opacity-50 text-muted-foreground"
+                      )}
+                    >
+                      Horário aproximado do incêndio
+                    </Label>
+                  </TooltipTrigger>
+                  {!dataIncendio && (
+                    <TooltipContent>
+                      Preencha primeiro a data aproximada em que avistou o incêndio
+                    </TooltipContent>
+                  )}
+                </Tooltip>
+                <div className="relative">
+                  <Clock className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                  <Input
+                    id="hora"
+                    type="time"
+                    placeholder="HH:MM"
+                    value={horaIncendio}
+                    onChange={(e) => setHoraIncendio(e.target.value)}
+                    disabled={!dataIncendio}
+                    className="bg-transparent border-border text-foreground placeholder:text-muted-foreground disabled:opacity-50 disabled:cursor-not-allowed pl-9 [&::-webkit-calendar-picker-indicator]:hidden"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Row 5: E-mail de contato */}
+            <div className="space-y-2">
+              <Label htmlFor="email" className="text-foreground">
+                E-mail de contato
+              </Label>
+              <Input
+                id="email"
+                type="email"
+                placeholder="seu@email.com"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData((prev) => ({ ...prev, email: e.target.value }))
+                }
+                className="bg-transparent border-border text-foreground placeholder:text-muted-foreground"
+              />
+              <p className="text-xs text-muted-foreground mt-1">
+                O seu e-mail será utilizado exclusivamente para atualizá-lo(a) sobre o resultado de sua denúncia.
+              </p>
             </div>
 
             {/* Row 4: Informações adicionais & Fotos */}
@@ -212,7 +251,7 @@ const ReportForm = () => {
                 </Label>
                 <Textarea
                   id="informacoes"
-                  placeholder="Horário aproximado em que avistou o fogo, se avistou alguma atitude suspeita antes ou após o surgimento da fumaça, etc."
+                  placeholder="Se avistou alguma atitude suspeita antes ou após o surgimento da fumaça, velocidade aproximada do fogo, etc."
                   value={formData.informacoesAdicionais}
                   onChange={(e) =>
                     setFormData((prev) => ({
