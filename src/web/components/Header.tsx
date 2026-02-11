@@ -1,14 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Flame } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
-  const scrollToForm = () => {
-    const formSection = document.getElementById("denuncia");
-    if (formSection) {
-      formSection.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-secondary/95 backdrop-blur-sm">
       <div className="container mx-auto px-6">
@@ -39,13 +33,11 @@ const Header = () => {
           </div>
 
           {/* CTA Button */}
-          <Button 
-            variant="cta" 
-            onClick={scrollToForm}
-            className="group"
-          >
-            Avistei um incêndio!
-            <Flame className="w-4 h-4 group-hover:animate-flame-flicker" />
+          <Button asChild variant="cta" className="group">
+            <Link to="/denunciar-queimada#denuncia">
+              Avistei um incêndio!
+              <Flame className="w-4 h-4 group-hover:animate-flame-flicker" />
+            </Link>
           </Button>
         </nav>
       </div>
