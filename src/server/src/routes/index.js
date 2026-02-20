@@ -11,14 +11,15 @@ routes.post('/register', AuthController.register);
 routes.post('/login', AuthController.login);
 
 routes.get('/fires', FireController.index);
+routes.post('/fires', FireController.store);
 
 // --- Rotas Fechadas ---
 routes.use(authMiddleware);
 
-routes.post('/fires', FireController.store);
 
 routes.get('/me', (req, res) => {
   return res.json({ ok: true, userId: req.userId });
 });
 
 module.exports = routes;
+

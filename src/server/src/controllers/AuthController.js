@@ -1,5 +1,6 @@
 // src/server/src/controllers/AuthController.js
 const { PrismaClient } = require('@prisma/client');
+const { sendMail } = require('../services/mailService');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
@@ -25,6 +26,11 @@ module.exports = {
           password: hashPassword,
         },
       });
+      await sendMail(
+        email,
+        "Bem-vindo 🔥",
+        `<h1>Conta criada com sucesso!</h1>`
+      );
 
       user.password = undefined;
 

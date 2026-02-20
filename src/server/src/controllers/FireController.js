@@ -1,3 +1,4 @@
+const { sendMail } = require('../services/mailService');
 const { PrismaClient } = require('@prisma/client');
 const prisma = new PrismaClient();
 
@@ -25,6 +26,16 @@ module.exports = {
         info: informacoesAdicionais,
       }
     });
+    await sendMail(
+      "wildfireawarenessuf@email.com", 
+      "Nova denúncia registrada 🔥",
+      `
+      <h2>Nova denúncia</h2>
+      <p><strong>Estado:</strong> ${estado}</p>
+      <p><strong>Cidade:</strong> ${cidade}</p>
+      <p><strong>Endereço:</strong> ${endereco}</p>
+      `
+    );
 
     return res.json(fire);
   }

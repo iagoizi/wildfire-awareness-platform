@@ -10,6 +10,8 @@ import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "@/lib/utils";
 import { useToast } from "@/hooks/use-toast";
+// BACKEND
+import axios from "axios";
 
 const ReportForm = () => {
   const { toast } = useToast();
@@ -43,12 +45,41 @@ const ReportForm = () => {
     setPhotos((prev) => prev.filter((_, i) => i !== index));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+
+  try {
+    const token = localStorage.getItem("token");
+
+    await axios.post(
+      "http://localhost:3000/fires",
+      {
+        estado: formData.estado,
+        cidade: formData.cidade,
+        endereco: formData.endereco,
+        pontoReferencia: formData.pontoReferencia,
+        informacoesAdicionais: formData.informacoesAdicionais,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
+    );
+
     toast({
       title: "Denúncia enviada!",
       description: "Obrigado por ajudar a proteger nossas florestas.",
     });
+
+  } catch (error: any) {
+    console.log(error.response);
+    toast({
+      title: "Erro ao enviar denúncia",
+      description: error.response?.data?.error || "Erro",
+      variant: "destructive",
+    });
+  }
   };
 
   return (
