@@ -8,6 +8,7 @@ import ScrollToTop from "@/components/ScrollToTop";
 import Home from "./pages/Home";
 import DenunciarQueimada from "./pages/DenunciarQueimada";
 import NotFound from "./pages/NotFound";
+import Articles from "./pages/Articles";
 import { routes } from "./routes";
 
 const queryClient = new QueryClient();
@@ -23,6 +24,7 @@ const App = () => (
           <Routes>
             <Route path={routes.home} element={<Home />} />
             <Route path={routes.report} element={<DenunciarQueimada />} />
+            <Route path={routes.articles} element={<Articles />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
