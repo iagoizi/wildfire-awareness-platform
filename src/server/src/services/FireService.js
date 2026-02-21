@@ -10,7 +10,7 @@ class FireService {
   }
 
   async createFire(data) {
-    const { estado, cidade, endereco, pontoReferencia, informacoesAdicionais } = data;
+    const { estado, cidade, endereco, pontoReferencia, informacoesAdicionais, status } = data;
 
     // Validação da regra de negócio
     if (!estado || !cidade || !endereco) {
@@ -25,12 +25,13 @@ class FireService {
         endereco,
         referencia: pontoReferencia,
         info: informacoesAdicionais,
+        status: status || 'Recebidas',
       }
     });
 
     // Envia o e-mail
     await sendMail(
-      "wildfireawarenessuf@email.com", 
+      "wildfireawarenessuf@email.com",
       `Nova denúncia registada #${fire.id} 🔥`,
       `
       <h2>Nova denúncia de queimada registada no sistema</h2>
@@ -48,7 +49,7 @@ class FireService {
   }
 
   async updateFire(id, data) {
-    const { estado, cidade, endereco, pontoReferencia, informacoesAdicionais } = data;
+    const { estado, cidade, endereco, pontoReferencia, informacoesAdicionais, status } = data;
     return await prisma.fireSpot.update({
       where: { id: Number(id) },
       data: {
@@ -57,6 +58,7 @@ class FireService {
         endereco,
         referencia: pontoReferencia,
         info: informacoesAdicionais,
+        status,
       }
     });
   }
@@ -69,6 +71,10 @@ class FireService {
 
   async getStats() {
     const totalDenunciasReal = await prisma.fireSpot.count();
+    const recebidas = await prisma.fireSpot.count({ where: { status: 'Recebidas' } });
+    const emAnalise = await prisma.fireSpot.count({ where: { status: 'Em análise' } });
+    const encaminhadas = await prisma.fireSpot.count({ where: { status: 'Encaminhadas' } });
+    const resolvidas = await prisma.fireSpot.count({ where: { status: 'Resolvidas' } });
 
     return {
       nacional: {
@@ -76,10 +82,11 @@ class FireService {
         multasIbama: "242"
       },
       plataforma: {
-        registradas: totalDenunciasReal > 0 ? totalDenunciasReal : 3482,
-        emAnalise: totalDenunciasReal > 0 ? Math.floor(totalDenunciasReal * 0.35) : 1260,
-        encaminhadas: totalDenunciasReal > 0 ? Math.floor(totalDenunciasReal * 0.55) : 1924,
-        resolvidas: totalDenunciasReal > 0 ? Math.floor(totalDenunciasReal * 0.10) : 1118
+        registradas: totalDenunciasReal,
+        recebidas,
+        emAnalise,
+        encaminhadas,
+        resolvidas
       }
     };
   }

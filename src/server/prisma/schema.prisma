@@ -24,6 +24,7 @@ model FireSpot {
   endereco  String
   referencia String?
   info      String?
+  status    String   @default("Recebida")
   createdAt DateTime @default(now())
 }
 
