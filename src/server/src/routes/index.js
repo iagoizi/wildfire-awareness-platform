@@ -15,6 +15,9 @@ routes.post('/fires', FireController.store);
 routes.put('/fires/:id', FireController.update);
 routes.delete('/fires/:id', FireController.destroy);
 
+// --- Nuúmeros de Impacto ---
+routes.get('/stats', FireController.stats);
+
 // --- Middleware de Proteção ---
 routes.use(authMiddleware);
 
