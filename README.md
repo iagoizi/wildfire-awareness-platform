@@ -12,7 +12,7 @@ Este projeto consiste em uma plataforma web integrada para conscientização amb
 
 O sistema busca unir educação ambiental com ação cidadã, criando um ciclo virtuoso de conscientização, engajamento e fiscalização colaborativa.
 
-## 🎯 Problema a Ser Solucionado
+## 🎯 Problema
 
 As queimadas criminosas representam uma grave ameaça ambiental no Brasil, causando:
 - Destruição de biomas e perda de biodiversidade
@@ -37,7 +37,7 @@ As queimadas criminosas representam uma grave ameaça ambiental no Brasil, causa
 | **Órgãos públicos** | Dados e denúncias para subsidiar ações de fiscalização |
 | **Jornalistas e pesquisadores** | Fontes de informação e dados sobre o tema |
 
-## 🛠️ Tecnologias Previstas
+## 🛠️ Tecnologias
 
 ### Frontend
 - **HTML5**, **CSS3** e **JavaScript** (ES6+)
