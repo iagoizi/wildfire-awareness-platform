@@ -1,4 +1,4 @@
-const ArticleService = require('../services/ArticleService');
+const ArticleService = require("../services/ArticleService");
 
 module.exports = {
   // GET: Lista os artigos
@@ -12,11 +12,13 @@ module.exports = {
     }
   },
 
-  // POST: Cria um artigo 
+  // POST: Cria um artigo
   async store(req, res) {
     try {
       const article = await ArticleService.createArticle(req.body);
-      return res.status(201).json({ message: "Artigo publicado com sucesso!", article });
+      return res
+        .status(201)
+        .json({ message: "Artigo publicado com sucesso!", article });
     } catch (error) {
       console.error(error);
       if (error.message.includes("obrigatórios")) {
@@ -24,5 +26,22 @@ module.exports = {
       }
       return res.status(500).json({ error: "Erro interno ao salvar artigo." });
     }
-  }
+  },
+
+  // PUT: Atualiza um artigo existente
+  async update(req, res) {
+    try {
+      const { id } = req.params;
+      const article = await ArticleService.updateArticle(id, req.body);
+
+      return res.json({ message: "Artigo atualizado com sucesso!", article });
+    } catch (error) {
+      console.error(error);
+      return res
+        .status(400)
+        .json({
+          error: "Erro ao atualizar. Artigo não encontrado ou slug já em uso.",
+        });
+    }
+  },
 };
