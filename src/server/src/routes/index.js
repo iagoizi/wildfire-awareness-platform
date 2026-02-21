@@ -23,6 +23,7 @@ routes.get('/stats', FireController.stats);
 routes.get('/articles', ArticleController.index);
 routes.post('/articles', ArticleController.store);
 routes.put('/articles/:id', ArticleController.update);
+routes.delete('/articles/:id', ArticleController.destroy);
 
 // --- Middleware de Proteção ---
 routes.use(authMiddleware);

@@ -9,7 +9,7 @@ class ArticleService {
     });
   }
 
-  // Cria Artigos
+  // Cria Artigo
   async createArticle(data) {
     const { title, slug, summary, content, imageUrl } = data;
 
@@ -22,7 +22,7 @@ class ArticleService {
     });
   }
 
-  // Atualiza Artigos
+  // Atualiza Artigo
   async updateArticle(id, data) {
     const { title, slug, summary, content, imageUrl } = data;
 
@@ -35,6 +35,13 @@ class ArticleService {
         content,
         imageUrl,
       },
+    });
+  }
+
+  // Deleta Artigo
+  async deleteArticle(id) {
+    return await prisma.article.delete({
+      where: { id: Number(id) },
     });
   }
 }

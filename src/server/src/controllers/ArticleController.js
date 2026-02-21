@@ -44,4 +44,17 @@ module.exports = {
         });
     }
   },
+
+  // DELETE: Exclui um artigo
+  async destroy(req, res) {
+    try {
+      const { id } = req.params;
+      await ArticleService.deleteArticle(id);
+      
+      return res.json({ message: "Artigo deletado com sucesso!" });
+    } catch (error) {
+      console.error(error);
+      return res.status(400).json({ error: "Erro ao deletar. Artigo não encontrado." });
+    }
+  }
 };
