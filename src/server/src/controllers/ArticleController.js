@@ -56,5 +56,22 @@ module.exports = {
       console.error(error);
       return res.status(400).json({ error: "Erro ao deletar. Artigo não encontrado." });
     }
-  }
+  },
+
+  // GET: Mostra um artigo específico
+  async show(req, res) {
+    try {
+      const { id } = req.params;
+      const article = await ArticleService.getArticleById(id);
+
+      if (!article) {
+        return res.status(404).json({ error: "Artigo não encontrado." });
+      }
+
+      return res.json(article);
+    } catch (error) {
+      console.error(error);
+      return res.status(500).json({ error: "Erro ao buscar o artigo." });
+    }
+  },
 };

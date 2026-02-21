@@ -44,6 +44,13 @@ class ArticleService {
       where: { id: Number(id) },
     });
   }
+
+  // Detalha Artigo
+  async getArticleById(id) {
+    return await prisma.article.findUnique({
+      where: { id: Number(id) }
+    });
+  }
 }
 
 module.exports = new ArticleService();

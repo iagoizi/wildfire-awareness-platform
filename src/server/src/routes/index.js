@@ -21,6 +21,7 @@ routes.get('/stats', FireController.stats);
 
 // --- Rotas de Artigos ----
 routes.get('/articles', ArticleController.index);
+routes.get('/articles/:id', ArticleController.show);
 routes.post('/articles', ArticleController.store);
 routes.put('/articles/:id', ArticleController.update);
 routes.delete('/articles/:id', ArticleController.destroy);
