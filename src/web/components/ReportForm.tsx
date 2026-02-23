@@ -59,12 +59,24 @@ const ReportForm = () => {
         pontoReferencia: formData.pontoReferencia,
         email: formData.email,
         informacoesAdicionais: formData.informacoesAdicionais,
+        photos: photos,
       }
     );
 
     toast({
       title: "Denúncia enviada!",
       description: "Obrigado por ajudar a proteger nossas florestas.",
+    });
+
+    // Limpar o formulário
+    setPhotos([]);
+    setFormData({
+      estado: "",
+      cidade: "",
+      endereco: "",
+      pontoReferencia: "",
+      email: "",
+      informacoesAdicionais: "",
     });
 
   } catch (error: any) {

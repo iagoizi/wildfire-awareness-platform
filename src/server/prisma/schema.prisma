@@ -23,7 +23,9 @@ model FireSpot {
   cidade    String
   endereco  String
   referencia String?
+  email     String?
   info      String?
+  photos    String?
   status    String   @default("Recebida")
   createdAt DateTime @default(now())
 }

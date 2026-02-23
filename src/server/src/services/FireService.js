@@ -10,7 +10,7 @@ class FireService {
   }
 
   async createFire(data) {
-    const { estado, cidade, endereco, pontoReferencia, email, informacoesAdicionais, status } = data;
+    const { estado, cidade, endereco, pontoReferencia, email, informacoesAdicionais, photos, status } = data;
 
     // Validação da regra de negócio
     if (!estado || !cidade || !endereco) {
@@ -24,13 +24,17 @@ class FireService {
         cidade,
         endereco,
         referencia: pontoReferencia,
+        email,
         info: informacoesAdicionais,
+        photos: photos && photos.length > 0 ? JSON.stringify(photos) : null,
         status: status || 'Recebidas',
       }
     });
 
     // Envia o e-mail com CC do usuário
     const cc = email ? [email] : [];
+    const photosInfo = photos && photos.length > 0 ? `<p><strong>Fotos anexadas:</strong> ${photos.length} foto(s)</p>` : '<p><strong>Fotos:</strong> Nenhuma</p>';
+    
     await sendMail(
       "wildfireawarenessuf@email.com",
       `Nova denúncia registada #${fire.id} 🔥`,
@@ -43,6 +47,7 @@ class FireService {
       <p><strong>Ponto de Referência:</strong> ${pontoReferencia || 'Não informado'}</p>
       <p><strong>E-mail de Contato:</strong> ${email || 'Não informado'}</p>
       <p><strong>Informações Adicionais:</strong> ${informacoesAdicionais || 'Nenhuma'}</p>
+      ${photosInfo}
       <p><strong>Data/Hora:</strong> ${fire.createdAt.toLocaleString('pt-PT')}</p>
       `,
       cc
