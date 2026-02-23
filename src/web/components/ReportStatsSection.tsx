@@ -122,22 +122,22 @@ const ReportStatsSection = () => {
 
   const statusData = [
     {
-      status: "Recebidas",
+      status: "Recebida",
       count: stats?.plataforma.recebidas || 0,
       color: "hsl(var(--fire-coral))",
     },
     {
-      status: "Em análise",
+      status: "Em Análise",
       count: stats?.plataforma.emAnalise || 0,
       color: "hsl(var(--fire-orange))",
     },
     {
-      status: "Encaminhadas",
+      status: "Encaminhada",
       count: stats?.plataforma.encaminhadas || 0,
       color: "hsl(var(--forest-green))",
     },
     {
-      status: "Resolvidas",
+      status: "Resolvida",
       count: stats?.plataforma.resolvidas || 0,
       color: "hsl(var(--cream))",
     },
@@ -188,9 +188,14 @@ const ReportStatsSection = () => {
 
           <div className="space-y-6">
             <div className="rounded-2xl border border-border/70 bg-card/70 p-6 shadow-lg backdrop-blur">
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                <h3 className="text-lg font-semibold text-cream">Distribuição por status</h3>
-                <span className="text-xs uppercase tracking-[0.25em] text-cream-muted">Total Histórico</span>
+              <div className="mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                  <h3 className="text-lg font-semibold text-cream">Situação atual das denúncias</h3>
+                  <span className="text-xs uppercase tracking-[0.25em] text-cream-muted">Todos os registros</span>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Total acumulado desde o início da plataforma
+                </p>
               </div>
 
               {isLoading ? (
@@ -227,9 +232,14 @@ const ReportStatsSection = () => {
             </div>
 
             <div className="rounded-2xl border border-border/70 bg-card/70 p-6 shadow-lg backdrop-blur">
-              <div className="flex flex-wrap items-center justify-between gap-2 mb-4">
-                <h3 className="text-lg font-semibold text-cream">Ritmo semanal de denúncias</h3>
-                <span className="text-xs uppercase tracking-[0.25em] text-cream-muted">Últimas 8 semanas</span>
+              <div className="mb-4">
+                <div className="flex flex-wrap items-center justify-between gap-2 mb-1">
+                  <h3 className="text-lg font-semibold text-cream">Ritmo semanal de denúncias</h3>
+                  <span className="text-xs uppercase tracking-[0.25em] text-cream-muted">Últimas 8 semanas</span>
+                </div>
+                <p className="text-xs text-muted-foreground">
+                  Evolução do volume de denúncias recebidas
+                </p>
               </div>
 
               {isLoading ? (

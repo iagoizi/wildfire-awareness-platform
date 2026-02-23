@@ -27,7 +27,7 @@ class FireService {
         email,
         info: informacoesAdicionais,
         photos: photos && photos.length > 0 ? JSON.stringify(photos) : null,
-        status: status || 'Recebidas',
+        status: status || 'Recebida',
       }
     });
 
@@ -97,10 +97,10 @@ class FireService {
 
   async getStats() {
     const totalDenunciasReal = await prisma.fireSpot.count();
-    const recebidas = await prisma.fireSpot.count({ where: { status: 'Recebidas' } });
-    const emAnalise = await prisma.fireSpot.count({ where: { status: 'Em análise' } });
-    const encaminhadas = await prisma.fireSpot.count({ where: { status: 'Encaminhadas' } });
-    const resolvidas = await prisma.fireSpot.count({ where: { status: 'Resolvidas' } });
+    const recebidas = await prisma.fireSpot.count({ where: { status: 'Recebida' } });
+    const emAnalise = await prisma.fireSpot.count({ where: { status: 'Em Análise' } });
+    const encaminhadas = await prisma.fireSpot.count({ where: { status: 'Encaminhada' } });
+    const resolvidas = await prisma.fireSpot.count({ where: { status: 'Resolvida' } });
 
     return {
       nacional: {

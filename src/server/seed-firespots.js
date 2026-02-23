@@ -42,7 +42,7 @@ async function main() {
             email: null,
             info: 'Queimada em área de pasto alcançando mata nativa. Aparentemente proposital.',
             photos: null,
-            status: 'Confirmada',
+            status: 'Encaminhada',
             createdAt: new Date('2026-02-18T16:45:00')
         },
         {
@@ -75,7 +75,7 @@ async function main() {
             email: 'vigilante.am@example.com',
             info: 'Grande área de floresta em chamas. Necessário combate imediato.',
             photos: JSON.stringify([generateMockPhoto()]),
-            status: 'Confirmada',
+            status: 'Encaminhada',
             createdAt: new Date('2026-02-15T19:30:00')
         },
         {
@@ -86,7 +86,7 @@ async function main() {
             email: null,
             info: 'Queimada para limpeza de pasto atingindo área de floresta. Desmatamento ilegal suspeito.',
             photos: null,
-            status: 'Sob Investigação',
+            status: 'Em Análise',
             createdAt: new Date('2026-02-14T15:10:00')
         },
         {
@@ -108,7 +108,7 @@ async function main() {
             email: 'ciclista.bh@example.com',
             info: 'Fumaça vista do alto da serra. Possível início de incêndio na vegetação.',
             photos: JSON.stringify([generateMockPhoto()]),
-            status: 'Recebida',
+            status: 'Resolvida',
             createdAt: new Date('2026-02-12T07:45:00')
         },
         {
@@ -119,7 +119,7 @@ async function main() {
             email: 'viajante.to@example.com',
             info: 'Queimada em área de cerrado. Fogo se espalhando rapidamente com o vento.',
             photos: null,
-            status: 'Confirmada',
+            status: 'Encaminhada',
             createdAt: new Date('2026-02-11T13:50:00')
         },
         {
@@ -130,7 +130,7 @@ async function main() {
             email: null,
             info: 'Incêndio em área de pasto próximo a área turística.',
             photos: JSON.stringify([generateMockPhoto()]),
-            status: 'Em Análise',
+            status: 'Recebida',
             createdAt: new Date('2026-02-10T09:30:00')
         },
         {
@@ -141,7 +141,7 @@ async function main() {
             email: 'guia.chapada@example.com',
             info: 'Fumaça intensa avistada próximo ao morro. Vento forte dificultando controle.',
             photos: JSON.stringify([generateMockPhoto(), generateMockPhoto()]),
-            status: 'Confirmada',
+            status: 'Encaminhada',
             createdAt: new Date('2026-02-09T16:15:00')
         },
         {
@@ -163,7 +163,7 @@ async function main() {
             email: 'montanhista.es@example.com',
             info: 'Incêndio em vegetação de altitude. Área de difícil acesso para combate.',
             photos: null,
-            status: 'Sob Investigação',
+            status: 'Em Análise',
             createdAt: new Date('2026-02-07T10:40:00')
         },
         {
@@ -174,8 +174,41 @@ async function main() {
             email: 'caminhoneiro@example.com',
             info: 'Grande queimada às margens da rodovia. Fumaça atrapalhando visibilidade no trânsito.',
             photos: JSON.stringify([generateMockPhoto(), generateMockPhoto()]),
-            status: 'Confirmada',
+            status: 'Resolvida',
             createdAt: new Date('2026-02-06T18:20:00')
+        },
+        {
+            estado: 'Santa Catarina',
+            cidade: 'Florianópolis',
+            endereco: 'Morro da Cruz - Trilha Principal',
+            referencia: 'Base do mirante panorâmico',
+            email: 'residente.sc@example.com',
+            info: 'Mesmo local da denúncia anterior. Verificado que não havia incêndio real.',
+            photos: null,
+            status: 'Resolvida',
+            createdAt: new Date('2026-02-05T09:10:00')
+        },
+        {
+            estado: 'Paraná',
+            cidade: 'Foz do Iguaçu',
+            endereco: 'BR-469 - Estrada do Parque Nacional',
+            referencia: 'Km 18, próximo à entrada do parque',
+            email: 'guarda.parque@example.com',
+            info: 'Foco de incêndio controlado próximo à área de visitação. Brigada já acionada.',
+            photos: JSON.stringify([generateMockPhoto()]),
+            status: 'Em Análise',
+            createdAt: new Date('2026-02-04T13:35:00')
+        },
+        {
+            estado: 'Ceará',
+            cidade: 'Guaramiranga',
+            endereco: 'CE-065 - Serra de Baturité',
+            referencia: 'Próximo ao Pico Alto',
+            email: null,
+            info: 'Queimada em área de mata atlântica serrana. Risco de expansão.',
+            photos: JSON.stringify([generateMockPhoto(), generateMockPhoto()]),
+            status: 'Encaminhada',
+            createdAt: new Date('2026-02-03T16:50:00')
         }
     ];
 
