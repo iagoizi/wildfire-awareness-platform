@@ -9,6 +9,7 @@ const authMiddleware = require('../middlewares/auth');
 // --- Rotas Abertas (Qualquer um acessa agora) ---
 routes.post('/register', AuthController.register);
 routes.post('/login', AuthController.login);
+routes.post('/auth/login', AuthController.adminLogin);
 
 // --- Rotas de incêndio ---
 routes.get('/fires', FireController.index);
