@@ -9,10 +9,11 @@ const transporter = nodemailer.createTransport({
   },
 });
 
-async function sendMail(to, subject, html) {
+async function sendMail(to, subject, html, cc = []) {
   try {
     const info = await transporter.sendMail({
       from: '"Wildfire" <no-reply@wildfire.com>',
+      cc,
       to,
       subject,
       html,
