@@ -34,6 +34,16 @@ Este documento registra as evidências das funcionalidades implementadas, os có
   - Atualização para incluir serviços externos
   - Plano de milestones e issues
   - Links para rastreamento de issues
+ 
+#### Estrutura Inicial das Páginas
+- **Commits:** `9e8a02f`
+- **Autor:** Luiz H. Carvalho
+- **Status:** ✅ Concluído
+- **Descrição:** Adiciona estrutura base de todas as páginas do projeto web
+  - Arquivos HTML para todas as seções principais
+  - Layout comum com cabeçalho, rodapé e navegação reutilizáveis
+  - Estilização CSS inicial para definir aparência geral (cores, tipografia, espaçamentos)
+  - Templates para futura integração com dados dinâmicos e serviços externos
 
 ---
 
@@ -408,7 +418,7 @@ Abaixo estão as capturas de tela demonstrando a interface rodando em ambiente l
 
 - **Iago Izidório Lacerda** - Frontend, UI/UX, Integração, Sistema de Autenticação
 - **Arthur Norberto** - Backend, APIs, Banco de Dados
-- **Luiz H. Carvalho** - Frontend, Documentação, Integração
+- **Luiz H. Carvalho** - Frontend, UI/UX, Documentação, Integração
 - **Leandro Augf** - Backend, Sistema de Email
 
 ---
