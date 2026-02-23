@@ -57,6 +57,7 @@ const ReportForm = () => {
         cidade: formData.cidade,
         endereco: formData.endereco,
         pontoReferencia: formData.pontoReferencia,
+        email: formData.email,
         informacoesAdicionais: formData.informacoesAdicionais,
       }
     );
