@@ -1,0 +1,579 @@
+{
+  "id": "26e69ee5-c5b2-4525-81c7-dc03c0d1cda6",
+  "version": "2.0",
+  "name": "wildfire-awareness-platform",
+  "url": "http://localhost:8080",
+  "tests": [{
+    "id": "d216ec21-ffc9-4845-a1ac-761244451506",
+    "name": "test",
+    "commands": [{
+      "id": "8fa8396f-9501-44ba-a772-4f66149498f1",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "35f604b2-26e3-4f24-9773-31bd47b39587",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1440x900",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f0778ee2-5087-45be-8813-d10ec2a4be94",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Denunciar agora",
+      "targets": [
+        ["linkText=Denunciar agora", "linkText"],
+        ["css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]", "css:finder"],
+        ["xpath=//a[contains(text(),'Denunciar agora')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/main/section[3]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/denunciar-queimada')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Denunciar agora')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2d9b8f1f-23a8-4bcc-9f93-9404b3029abb",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Denunciar agora",
+      "targets": [
+        ["linkText=Denunciar agora", "linkText"],
+        ["css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]", "css:finder"],
+        ["xpath=//a[contains(text(),'Denunciar agora')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/main/section[3]/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/denunciar-queimada')])[2]", "xpath:href"],
+        ["xpath=//div[2]/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Denunciar agora')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5f74520c-d8b0-4ff0-a671-0c2dad57f395",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,525)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa839842-3046-4abb-b81d-c1a7f6ca81f8",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,341)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a5841a91-b9bb-4729-94b7-5e3992b9e6ec",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1160)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "880b65a4-e373-40b5-876e-42b2d9ce2ee7",
+      "comment": "",
+      "command": "click",
+      "target": "id=estado",
+      "targets": [
+        ["id=estado", "id"],
+        ["css=#estado", "css:finder"],
+        ["xpath=//input[@id='estado']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d355a610-f0d5-4e79-8190-ce84360fc83f",
+      "comment": "",
+      "command": "type",
+      "target": "id=estado",
+      "targets": [
+        ["id=estado", "id"],
+        ["css=#estado", "css:finder"],
+        ["xpath=//input[@id='estado']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div/div/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Minas Gerais"
+    }, {
+      "id": "6a8afc5b-ab12-4ac4-9167-571903de0ed2",
+      "comment": "",
+      "command": "type",
+      "target": "id=cidade",
+      "targets": [
+        ["id=cidade", "id"],
+        ["css=#cidade", "css:finder"],
+        ["xpath=//input[@id='cidade']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Ouro Preto"
+    }, {
+      "id": "4042d712-c808-442f-9399-8c08f2a6193d",
+      "comment": "",
+      "command": "type",
+      "target": "id=endereco",
+      "targets": [
+        ["id=endereco", "id"],
+        ["css=#endereco", "css:finder"],
+        ["xpath=//input[@id='endereco']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "ICEB / UFOP"
+    }, {
+      "id": "f55aa935-aec3-40c9-b1c7-25e8267bab4a",
+      "comment": "",
+      "command": "type",
+      "target": "id=pontoReferencia",
+      "targets": [
+        ["id=pontoReferencia", "id"],
+        ["css=#pontoReferencia", "css:finder"],
+        ["xpath=//input[@id='pontoReferencia']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[2]/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/input", "xpath:position"]
+      ],
+      "value": "Centro de Convergência"
+    }, {
+      "id": "e3194363-c1d2-4f29-acb7-dd2a55366ec6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hover\\3A bg-accent",
+      "targets": [
+        ["css=.hover\\3A bg-accent", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Selecione a data')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "64e3756b-0dd4-43c9-8cc2-447fb9c60617",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hover\\3A bg-accent",
+      "targets": [
+        ["css=.hover\\3A bg-accent", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Selecione a data')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d991158f-3af2-4206-898f-083724829699",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.justify-start",
+      "targets": [
+        ["css=.justify-start", "css:finder"],
+        ["xpath=//button[@type='button']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[3]/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Selecione a data')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cbb314fd-ed28-4ec3-9947-664c0e03d5e5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.bg-accent",
+      "targets": [
+        ["css=.bg-accent", "css:finder"],
+        ["xpath=(//button[@name='day'])[23]", "xpath:attributes"],
+        ["xpath=//div[@id='radix-:r0:']/div/div/div/table/tbody/tr[4]/td[2]/button", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'23')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea361994-cd45-418f-8f8e-ac814e528298",
+      "comment": "",
+      "command": "click",
+      "target": "id=hora",
+      "targets": [
+        ["id=hora", "id"],
+        ["css=#hora", "css:finder"],
+        ["xpath=//input[@id='hora']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d15eaca1-86c3-47e2-b3cd-b91beceb21bc",
+      "comment": "",
+      "command": "type",
+      "target": "id=hora",
+      "targets": [
+        ["id=hora", "id"],
+        ["css=#hora", "css:finder"],
+        ["xpath=//input[@id='hora']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[3]/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "18:00"
+    }, {
+      "id": "be920c3e-64ad-467a-ad01-42a1cfcf3990",
+      "comment": "",
+      "command": "click",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1d0658e-7fb1-4cdf-9ad3-410e580892f4",
+      "comment": "",
+      "command": "type",
+      "target": "id=email",
+      "targets": [
+        ["id=email", "id"],
+        ["css=#email", "css:finder"],
+        ["xpath=//input[@id='email']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[4]/input", "xpath:idRelative"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "luizhenrique910@gmail.com"
+    }, {
+      "id": "50e47c00-8459-4b8b-9b3a-5b5ac0974fb7",
+      "comment": "",
+      "command": "click",
+      "target": "id=informacoes",
+      "targets": [
+        ["id=informacoes", "id"],
+        ["css=#informacoes", "css:finder"],
+        ["xpath=//textarea[@id='informacoes']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[5]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b18c33bb-cbb9-45ed-a621-96362fd70c2c",
+      "comment": "",
+      "command": "type",
+      "target": "id=informacoes",
+      "targets": [
+        ["id=informacoes", "id"],
+        ["css=#informacoes", "css:finder"],
+        ["xpath=//textarea[@id='informacoes']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/div[5]/div/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Muito fogo!"
+    }, {
+      "id": "63e946a0-cab7-46bf-a88e-e24a717ebc95",
+      "comment": "",
+      "command": "click",
+      "target": "css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]",
+      "targets": [
+        ["css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar denúncia!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "94da1bfc-0ed3-4e61-8944-feae029c072e",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]",
+      "targets": [
+        ["css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar denúncia!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "22229961-9c9f-44d7-9a08-be25b01c5789",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]",
+      "targets": [
+        ["css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar denúncia!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "84499b54-aa2c-4cb5-9e5c-2d8105be5cd2",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]",
+      "targets": [
+        ["css=.shadow-\\[0_0_20px_hsl\\(6_78\\%_57\\%\\/0\\.4\\)\\]", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//section[@id='denuncia']/div[2]/div[2]/form/button", "xpath:idRelative"],
+        ["xpath=//form/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Enviar denúncia!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "24e635d2-f4b3-4424-9bbc-6be19a94f963",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Avistei um incêndio!",
+      "targets": [
+        ["linkText=Avistei um incêndio!", "linkText"],
+        ["css=.hover\\3Ashadow-lg", "css:finder"],
+        ["xpath=//a[contains(text(),'Avistei um incêndio!')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/header/div/nav/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/denunciar-queimada#denuncia')]", "xpath:href"],
+        ["xpath=//nav/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Avistei um incêndio!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1b2ee02-6bff-46c1-a242-b2a2dd6031c9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Página inicial",
+      "targets": [
+        ["linkText=Página inicial", "linkText"],
+        ["css=li:nth-child(1) > .text-cream-muted", "css:finder"],
+        ["xpath=//a[contains(text(),'Página inicial')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/footer/div/div/div[2]/ul/li/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[5]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Página inicial')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "00054c1b-fd6c-47f2-a020-8ab698e4a611",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Fazer denúncia!",
+      "targets": [
+        ["linkText=Fazer denúncia!", "linkText"],
+        ["css=li:nth-child(3) > .text-cream-muted", "css:finder"],
+        ["xpath=//a[contains(text(),'Fazer denúncia!')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/footer/div/div/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/denunciar-queimada#denuncia')])[2]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Fazer denúncia!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "caa593ee-e6db-46d9-864e-854d95c9b3b6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Fazer denúncia!",
+      "targets": [
+        ["linkText=Fazer denúncia!", "linkText"],
+        ["css=li:nth-child(3) > .text-cream-muted", "css:finder"],
+        ["xpath=//a[contains(text(),'Fazer denúncia!')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/footer/div/div/div[2]/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/denunciar-queimada#denuncia')])[2]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Fazer denúncia!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b4b25517-30b2-473c-96b5-a52db0f49e3f",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2275.5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b7b05ee9-fcb3-4ac4-bed7-f25d291a86f0",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,2632)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1efd65b5-0d15-45ef-913c-b810f71be871",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Artigos",
+      "targets": [
+        ["linkText=Artigos", "linkText"],
+        ["css=.font-medium:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Artigos')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/header/div/nav/div/div/a[2]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/artigos')]", "xpath:href"],
+        ["xpath=//a[2]", "xpath:position"],
+        ["xpath=//a[contains(.,'Artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b122ca26-3a89-453f-9533-d1a6d1f5e95b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Ler artigo completo",
+      "targets": [
+        ["linkText=Ler artigo completo", "linkText"],
+        ["css=.rounded-lg:nth-child(1) .inline-flex", "css:finder"],
+        ["xpath=//a[contains(text(),'Ler artigo completo')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/main/div/div[2]/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/artigos/3')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ler artigo completo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dab9af51-8ebf-40c1-b976-35f03d2b47c5",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Ler artigo completo",
+      "targets": [
+        ["linkText=Ler artigo completo", "linkText"],
+        ["css=.rounded-lg:nth-child(1) .inline-flex", "css:finder"],
+        ["xpath=//a[contains(text(),'Ler artigo completo')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/main/div/div[2]/div/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/artigos/3')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Ler artigo completo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3043960-40de-40a6-9f17-0ae1a831f6cb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border",
+      "targets": [
+        ["css=.border", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/main/div/article/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver mais artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "be25fb05-c149-462f-b570-945f9ae9bbae",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.border",
+      "targets": [
+        ["css=.border", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/main/div/article/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver mais artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7c71b45-b7c7-446d-a433-6be4b3a8e72b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-lg:nth-child(2) .inline-flex",
+      "targets": [
+        ["css=.rounded-lg:nth-child(2) .inline-flex", "css:finder"],
+        ["xpath=(//a[contains(text(),'Ler artigo completo')])[2]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/main/div/div[2]/div[2]/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/artigos/2')]", "xpath:href"],
+        ["xpath=//div[2]/div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0cdca1a0-03b1-4bb9-a2b5-e354f3905012",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,312.5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ab1a2d9-e717-47a5-b999-0d6f1189d6f6",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border",
+      "targets": [
+        ["css=.border", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/main/div/article/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver mais artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8df683f7-61df-42ef-841c-d8cd0c902db6",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.border",
+      "targets": [
+        ["css=.border", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/main/div/article/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver mais artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab6fa072-995e-4b6c-b5c0-883c58f4e66c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.rounded-lg:nth-child(3) .inline-flex",
+      "targets": [
+        ["css=.rounded-lg:nth-child(3) .inline-flex", "css:finder"],
+        ["xpath=(//a[contains(text(),'Ler artigo completo')])[3]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/main/div/div[2]/div[3]/div[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/artigos/1')]", "xpath:href"],
+        ["xpath=//div[3]/div[4]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "732cb709-afa2-457f-bf62-0e10645c0742",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,312.5)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e5102978-bf2c-4148-9e74-f22c3094baf0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.border",
+      "targets": [
+        ["css=.border", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/main/div/article/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver mais artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54cfa834-3bb7-4540-b277-186bb3ba0e19",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.border",
+      "targets": [
+        ["css=.border", "css:finder"],
+        ["xpath=//div[@id='root']/div[2]/main/div/article/div[4]/button", "xpath:idRelative"],
+        ["xpath=//div[4]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Ver mais artigos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "68a2bce7-8243-4fee-8660-cb1c15c6415f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Página Inicial",
+      "targets": [
+        ["linkText=Página Inicial", "linkText"],
+        ["css=.hidden > .text-foreground:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'Página Inicial')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div[2]/header/div/nav/div/div/a", "xpath:idRelative"],
+        ["xpath=(//a[contains(@href, '/')])[2]", "xpath:href"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Página Inicial')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a326ae82-5510-4e4f-8c83-8fe91efb08b1",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d216ec21-ffc9-4845-a1ac-761244451506"]
+  }],
+  "urls": ["http://localhost:8080/"],
+  "plugins": []
+}
