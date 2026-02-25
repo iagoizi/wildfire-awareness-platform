@@ -283,7 +283,7 @@ Este documento registra as evidências das funcionalidades implementadas, os có
   - [seed-articles.js](https://github.com/iagoizi/wildfire-awareness-platform/blob/main/src/server/seed-articles.js)
   - [ArticleDetail.tsx](https://github.com/iagoizi/wildfire-awareness-platform/blob/main/src/web/pages/ArticleDetail.tsx)
 
-#### CRM de Gerenciamento de Artigos
+#### CMS de Gerenciamento de Artigos
 - **Commit:** `264e34f`
 - **Autor:** Iago Izidório Lacerda
 - **Status:** ✅ Concluído
@@ -300,8 +300,8 @@ Este documento registra as evidências das funcionalidades implementadas, os có
 - **Commit:** `df785d9`
 - **Autor:** Iago Izidório Lacerda
 - **Status:** ✅ Concluído
-- **Descrição:** Sistema completo de autenticação para acesso ao CRM:
-  - Página de login em /crm com credenciais baseadas em variáveis de ambiente
+- **Descrição:** Sistema completo de autenticação para acesso ao CMS:
+  - Página de login em /cms com credenciais baseadas em variáveis de ambiente
   - AuthContext para gerenciamento de estado de autenticação global
   - Componente PrivateRoute para proteção de rotas
   - Endpoint de login no backend validando credenciais do .env
@@ -330,7 +330,7 @@ Este documento registra as evidências das funcionalidades implementadas, os có
 - ✅ Página de listagem de artigos/notícias
 - ✅ Página de detalhes de artigo
 - ✅ Sistema de autenticação com Context API
-- ✅ CRM administrativo para gerenciamento de artigos
+- ✅ CMS administrativo para gerenciamento de artigos
 - ✅ Interface de login para administradores
 - ✅ Proteção de rotas privadas
 
@@ -397,7 +397,7 @@ Abaixo estão as capturas de tela demonstrando a interface rodando em ambiente l
 
 ![Screenshot de Detalhe de Artigo Mobile](./imgs/detalhe-artigo-mobile.jpeg)
 
-### CRM - Login Administrativo
+### CMS - Login Administrativo
 > Tela de acesso ao painel de gerenciamento.
 
 ![Screenshot do Login Admin](./imgs/admin-login.jpeg)

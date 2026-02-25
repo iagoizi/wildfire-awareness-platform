@@ -93,7 +93,7 @@
   - POST /articles - Criação
   - PUT /articles/:id - Atualização
   - DELETE /articles/:id - Deleção
-- ✅ Painel CRM para gestão de artigos em /crm/artigos
+- ✅ Painel CMS para gestão de artigos em /cms/artigos
 - ✅ Interface de criação/edição com modais
 - ✅ Geração automática de slug a partir do título
 - ✅ Sistema de confirmação para exclusão
@@ -102,7 +102,7 @@
 
 **Entregáveis:**
 - ✅ Backend completo para gerenciamento de artigos
-- ✅ Interface administrativa (CRM) responsiva
+- ✅ Interface administrativa (CMS) responsiva
 - ✅ Sistema de slug automático
 - ✅ Dados de teste para desenvolvimento
 
@@ -116,7 +116,7 @@
 
 **Tarefas Realizadas:**
 - ✅ Sistema completo de autenticação administrativa
-  - Página de login em /crm
+  - Página de login em /cms
   - AuthContext para gerenciamento de estado global
   - PrivateRoute para proteção de rotas
   - Endpoint de login com validação de credenciais do .env

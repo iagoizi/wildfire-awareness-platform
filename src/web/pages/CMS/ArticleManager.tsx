@@ -178,7 +178,7 @@ const ArticleManager = () => {
     return (
         <>
             <Helmet>
-                <title>Gerenciar Artigos - CRM</title>
+                <title>Gerenciar Artigos - CMS</title>
                 <meta name="description" content="Gerenciamento de artigos do sistema" />
             </Helmet>
 

@@ -10,8 +10,8 @@ import DenunciarQueimada from "./pages/DenunciarQueimada";
 import NotFound from "./pages/NotFound";
 import Articles from "./pages/Articles";
 import ArticleDetail from "./pages/ArticleDetail";
-import CRMLogin from "./pages/CRM/Login";
-import ArticleManager from "./pages/CRM/ArticleManager";
+import CMSLogin from "./pages/CMS/Login";
+import ArticleManager from "./pages/CMS/ArticleManager";
 import PrivateRoute from "./components/PrivateRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 import { routes } from "./routes";
@@ -32,9 +32,9 @@ const App = () => (
               <Route path={routes.report} element={<DenunciarQueimada />} />
               <Route path={routes.articles} element={<Articles />} />
               <Route path={routes.articleDetail} element={<ArticleDetail />} />
-              <Route path={routes.crmLogin} element={<CRMLogin />} />
+              <Route path={routes.cmsLogin} element={<CMSLogin />} />
               <Route
-                path={routes.crmArticles}
+                path={routes.cmsArticles}
                 element={
                   <PrivateRoute>
                     <ArticleManager />

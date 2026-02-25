@@ -4,6 +4,6 @@ export const routes = {
   articles: "/artigos",
   articleDetail: "/artigos/:id",
   reportForm: "/denunciar-queimada#denuncia",
-  crmLogin: "/crm",
-  crmArticles: "/crm/artigos",
+  cmsLogin: "/cms",
+  cmsArticles: "/cms/artigos",
 } as const;

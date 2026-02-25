@@ -10,7 +10,7 @@ import { useAuth } from "@/contexts/AuthContext";
 import { api } from "@/lib/api";
 import { Lock } from "lucide-react";
 
-const CRMLogin = () => {
+const CMSLogin = () => {
     const navigate = useNavigate();
     const { login } = useAuth();
     const [isLoading, setIsLoading] = useState(false);
@@ -35,8 +35,8 @@ const CRMLogin = () => {
                 description: "Bem-vindo ao sistema de gerenciamento.",
             });
 
-            // Redirecionar para o CRM
-            navigate("/crm/artigos");
+            // Redirecionar para o CMS
+            navigate("/cms/artigos");
         } catch (error: any) {
             console.error("Login error:", error);
             toast({
@@ -52,7 +52,7 @@ const CRMLogin = () => {
     return (
         <>
             <Helmet>
-                <title>Login - CRM</title>
+                <title>Login - CMS</title>
                 <meta name="description" content="Área administrativa do sistema" />
             </Helmet>
 
@@ -121,4 +121,4 @@ const CRMLogin = () => {
     );
 };
 
-export default CRMLogin;
+export default CMSLogin;

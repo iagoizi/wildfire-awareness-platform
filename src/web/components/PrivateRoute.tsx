@@ -10,7 +10,7 @@ const PrivateRoute = ({ children }: PrivateRouteProps) => {
 
     if (!isAuthenticated) {
         // Redireciona para a página de login se não autenticado
-        return <Navigate to="/crm" replace />;
+        return <Navigate to="/cms" replace />;
     }
 
     return <>{children}</>;
